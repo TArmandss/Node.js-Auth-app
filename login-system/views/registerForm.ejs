@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../static/RegisterFome.css" />
+    <script
+      src="https://kit.fontawesome.com/c8b85a9cf2.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <video autoplay loop muted id="bgVideo">
+      <source src="/video/AdobeStock_486685290.mp4" type="video/mp4" />
+    </video>
+
+    <form action="/register" method="post">
+      <a href="/" class="arrow-back"><i class="fa-solid fa-arrow-left"></i></a>
+      <div class="txt">
+        <h1>Sign up</h1>
+        <% if (message) { %>
+          <p style="color: red;"><%= message %></p>
+        <% } %>
+        
+        <h1 class="logout-txt" style="color: green; font-size: 12px"></h1>
+      </div>
+
+      <div class="form">
+        <div class="left">
+          <div class="name-input">
+            <input type="text" id="new_name" name="new_name" required />
+          </div>
+          <div class="last_name-input">
+            <input
+              type="text"
+              id="new_last_name"
+              name="new_last_name"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="right">
+          <div class="gmail-input">
+            <input type="text" id="new_username" name="new_username" required />
+          </div>
+          <div class="password-input">
+            <input
+              type="password"
+              id="new_password"
+              name="new_password"
+              required
+            />
+          </div>
+        </div>
+      </div>
+
+      <button type="submit">register</button>
+    </form>
+  </body>
+</html>

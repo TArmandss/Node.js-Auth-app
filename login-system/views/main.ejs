@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/Form.css" />
+    <script
+      src="https://kit.fontawesome.com/c8b85a9cf2.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <video autoplay loop muted id="bgVideo">
+      <source src="/video/AdobeStock_486685290.mp4" type="video/mp4" />
+    </video>
+
+    <form action="/login" method="post">
+      <div class="txt">
+        <h1>Welcome back!</h1>
+        <% if (title) { %>
+          <p class="<%= isIncorrect ? 'incorrect' : 'logout-txt ' %>">
+            <%= title %>
+          </p>
+        <% } else { %>
+          <p>Log in to your account</p>
+        <% } %>
+      </div>
+
+      <div class="gmail-input">
+        <input type="gmail" id="username" name="username" required />
+      </div>
+      <div class="password-input">
+        <input type="password" id="password" name="password" required />
+      </div>
+      <button type="submit">
+        Submit <i class="fa-solid fa-arrow-right-long"></i>
+      </button>
+      <h1 class="create_account_text">
+        Don't have an account ? <a href="/register">create one now</a>
+      </h1>
+    </form>
+  </body>
+</html>
